@@ -1,0 +1,13 @@
+def largest_smaller_than(list_nums, num):
+	# it covers edge cases
+    largest_num = None
+
+    for i in list_nums:
+
+        if i < num:
+            if largest_num == None or i > largest_num:
+                largest_num = i
+
+    return largest_num
+
+print(largest_smaller_than([1,4,2,8,6,9], 7))
