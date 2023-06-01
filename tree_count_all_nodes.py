@@ -15,19 +15,17 @@ class Node:
       
       while to_visit:
           count += 1
-          current_node = to_visit.pop()
+          current_node = to_visit.pop() #DFS
           to_visit.extend(current_node.children)
           
       return count
-  
-  
+
   
 new_node1 =Node(1)
 new_node2 =Node(2)
 new_node3 =Node(3)
 new_node4 =Node(4)
 new_node5 = Node(5)
-
 
 new_node_tree = Node(new_node1, [Node(new_node2, [new_node5, new_node3]), new_node3, new_node4])
 
